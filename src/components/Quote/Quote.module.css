@@ -1,0 +1,60 @@
+.quoteContainer {
+  max-width: 280px;
+  display: flex;
+  /* padding: 32px 59px 0px 26px; */
+  margin-top: 32px;
+  margin-left: 26px;
+  position: relative;
+}
+
+.quoteContainer button {
+  background: none;
+  border: none;
+}
+
+.quoteContainer img {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 10px;
+  left: 290px;
+}
+
+/* quote */
+.quoteContainer h5 {
+  font-size: 12px;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.quoteContainer h5 span {
+  font-weight: 700;
+  display: block;
+  padding-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .quoteContainer h5 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .quoteContainer {
+    max-width: 530px;
+    margin-top: 80px;
+    margin-left: 64px;
+  }
+
+  .quoteContainer img {
+    top: 10px;
+    left: 540px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .quoteContainer {
+    margin-top: 56px;
+    margin-left: 165px;
+  }
+}

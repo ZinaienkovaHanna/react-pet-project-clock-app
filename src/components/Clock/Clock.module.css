@@ -1,0 +1,175 @@
+.clockContainer {
+  margin-top: auto;
+  margin-left: 26px;
+}
+
+/* clock */
+.clockContainer h1 {
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 100px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.clockContainer h1 span {
+  font-family: 'Inter';
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-style: normal;
+  padding-left: 5px;
+}
+
+/* in london */
+.clockContainer h3 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 3px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/* good morning */
+.clockContainer h4 {
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 25px;
+  padding-left: 16px;
+}
+
+.clockContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 115px;
+  height: 39px;
+  border-radius: 28px;
+  background-color: var(--white);
+  border: var(--white);
+  color: var(--grey);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 3.75px;
+  text-transform: uppercase;
+  margin-top: 48px;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.arrowDown,
+.arrowUp {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px;
+  border-radius: 50%;
+  background-color: var(--very-dark-grey);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.arrowDown {
+  background-image: url('../../../public/images/desktop/icon-arrow-down.svg');
+  background-size: 12px;
+}
+
+.arrowUp {
+  background-image: url('../../../public/images/desktop/icon-arrow-up.svg');
+  background-size: 36px;
+}
+
+.clockContainer button span {
+  margin-right: 5px;
+}
+
+.timeOfDay {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .clockContainer {
+    margin-left: 64px;
+  }
+
+  .clockContainer h1 {
+    font-size: 175px;
+    line-height: 175px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .clockContainer h1 span {
+    font-size: 32px;
+    padding-left: 11px;
+  }
+
+  .clockContainer h3 {
+    font-size: 18px;
+    letter-spacing: 4.8px;
+    line-height: 28px;
+    letter-spacing: 3.6px;
+  }
+
+  .clockContainer h4 {
+    font-size: 18px;
+    letter-spacing: 3.6px;
+    line-height: 28px;
+  }
+
+  .clockContainer button {
+    margin-top: 80px;
+    width: 146px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 5px;
+    margin-bottom: 64px;
+  }
+
+  .arrowDown,
+  .arrowUp {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .clockContainer {
+    margin-left: 165px;
+    display: flex;
+  }
+
+  .clockContainer button {
+    margin-left: 389px;
+    margin-top: 227px;
+    margin-bottom: 56px;
+  }
+  .clockContainer h1 {
+    font-size: 200px;
+    line-height: 200px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .clockContainer h1 span {
+    font-size: 40px;
+  }
+
+  .clockContainer h3 {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 4.8px;
+  }
+
+  .clockContainer h4 {
+    font-size: 20px;
+    letter-spacing: 4px;
+    line-height: 28px;
+  }
+}

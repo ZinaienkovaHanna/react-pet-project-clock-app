@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+
+  --black: #000000;
+  --very-dark-grey: #303030;
+  --grey: #999999;
+  --light-grey: #979797;
+
+  --white: #ffffff;
+  --background-grey: #d8d8d8;
+
+  /* family */
+  --ff: 'Inter';
+}
+
+#root {
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--ff);
+  font-weight: 400;
+  color: var(--white);
+}

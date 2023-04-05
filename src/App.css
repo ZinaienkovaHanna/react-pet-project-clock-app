@@ -1,0 +1,68 @@
+.bgContainer.dayTime {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../public/images/mobile/bg-image-daytime.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-y: auto;
+}
+
+.bgContainer.nightTime {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../public/images/mobile/bg-image-nighttime.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-y: auto;
+}
+
+.mainClockContainer {
+  margin: 0 auto;
+  width: 375px;
+  height: 667px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .bgContainer.dayTime {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../public/images/tablet/bg-image-daytime.jpg);
+  }
+
+  .bgContainer.nightTime {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../public/images/tablet/bg-image-nighttime.jpg);
+  }
+
+  .mainClockContainer {
+    width: 768px;
+    height: 1024px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bgContainer.dayTime {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../public/images/desktop/bg-image-daytime.jpg);
+  }
+
+  .bgContainer.nightTime {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../public/images/desktop/bg-image-nighttime.jpg);
+  }
+
+  .mainClockContainer {
+    width: 1440px;
+    height: 800px;
+  }
+}

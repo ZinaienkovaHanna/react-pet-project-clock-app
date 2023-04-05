@@ -1,0 +1,149 @@
+.currentDataContainer {
+  /* display: none; */
+  /* margin-top: 40px; */
+  height: 256px;
+  background-color: var(--light-grey);
+}
+
+.gridContainer {
+  max-width: 323px;
+  margin: 0 auto;
+  padding-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 16px;
+}
+
+/* Europe/London */
+.gridContainer h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--very-dark-grey);
+  text-align: right;
+}
+
+/* CURRENT TIMEZONE */
+.gridContainer h6 {
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 2px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--very-dark-grey);
+}
+
+@media (min-width: 768px) {
+  .currentDataContainer {
+    /* margin-top: 64px; */
+    height: 440px;
+  }
+
+  .gridContainer {
+    max-width: 602px;
+    margin: 0;
+    padding-top: 119px;
+    padding-left: 64px;
+    grid-row-gap: 0px;
+    grid-column-gap: 80px;
+  }
+
+  .gridContainer h2 {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: left;
+  }
+
+  .gridContainer h6 {
+    font-size: 13px;
+    letter-spacing: 2.6px;
+  }
+
+  .gridContainer h6:first-child {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .gridContainer h6:nth-child(2) {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .gridContainer h6:nth-child(3) {
+    grid-row: 3;
+    grid-column: 1;
+    padding-top: 49px;
+  }
+
+  .gridContainer h6:nth-last-child(2) {
+    grid-row: 3;
+    grid-column: 2;
+    padding-top: 49px;
+  }
+
+  .gridContainer h2:first-child {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .gridContainer h2:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .gridContainer h2:nth-child(3) {
+    grid-row: 4;
+    grid-column: 2;
+  }
+
+  .gridContainer h2:nth-child(4) {
+    grid-row: 4;
+    grid-column: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  .currentDataContainer {
+    /* margin-top: 56px; */
+    height: 400px;
+  }
+
+  .gridContainer {
+    max-width: 1009px;
+    padding-left: 165px;
+    padding-top: 74px;
+    grid-row-gap: 9px;
+    grid-column-gap: 242px;
+    position: relative;
+  }
+
+  .gridContainer h6:nth-child(3) {
+    padding-top: 33px;
+  }
+
+  .gridContainer h6:nth-last-child(2) {
+    padding-top: 33px;
+  }
+
+  .gridContainer::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 252px;
+    left: 60%;
+    background-color: var(--very-dark-grey);
+    opacity: 0.25;
+    grid-row: 1 / -1;
+  }
+
+  .gridContainer h2 {
+    font-size: 56px;
+    line-height: 68px;
+  }
+
+  .gridContainer h6 {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+}
