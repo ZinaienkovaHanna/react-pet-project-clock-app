@@ -27,9 +27,9 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { city, countryCode, timezone } = await getLocation();
+      const { city, country_code, timezone } = await getLocation();
       setCity(city);
-      setCountryCode(countryCode);
+      setCountryCode(country_code);
       setTimeZone(timezone);
     };
     fetchData();
