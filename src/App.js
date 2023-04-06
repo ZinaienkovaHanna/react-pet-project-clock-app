@@ -5,7 +5,7 @@ import CurrentData from './components/CurrentData/CurrentData';
 import Quote from './components/Quote/Quote';
 import useIpServices from './services/IpServices';
 
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
   const { getLocation } = useIpServices();
@@ -36,7 +36,7 @@ function App() {
 
     const intervalId = setInterval(() => {
       setCurrentDate(new Date());
-    }, 60000); // 60000 мс = 1 хвилина
+    }, 60000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -45,11 +45,8 @@ function App() {
     const hours = currentDate.getHours();
     const minutes = String(currentDate.getMinutes()).padStart(2, '0');
 
-    // Отримання поточного часу
-    // const currentTime = `${hours}:${minutes}`;
     setCurrentTime(`${hours}:${minutes}`);
 
-    // Отримання пори дня
     let timeOfDay;
     if (hours < 6) {
       timeOfDay = 'night';
@@ -62,11 +59,9 @@ function App() {
     }
     setTimeOfDay(timeOfDay);
 
-    // Отримання дня тижня
     const dayOfWeek = currentDate.getDay();
     setDayOfWeek(dayOfWeek);
 
-    // Отримання дня року та тижня року
     const startOfYear = new Date(currentDate.getFullYear(), 0, 0);
     const diff = currentDate - startOfYear;
     const oneDay = 1000 * 60 * 60 * 24;
@@ -77,17 +72,17 @@ function App() {
   }, [currentDate, currentTime]);
 
   return (
-    <section className="clockApp">
+    <section className={styles.clockApp}>
       <div
-        className={`bgContainer ${
+        className={`${styles.bgContainer} ${
           timeOfDay === 'night' || timeOfDay === 'evening'
-            ? 'nightTime'
-            : 'dayTime'
+            ? styles.nightTime
+            : styles.dayTime
         }`}
       >
         <div
-          className={`mainClockContainer ${
-            onButtonClicked ? '' : 'otherHeight'
+          className={`${styles.mainClockContainer} ${
+            onButtonClicked ? '' : styles.otherHeight
           }`}
         >
           {onButtonClicked && <Quote />}

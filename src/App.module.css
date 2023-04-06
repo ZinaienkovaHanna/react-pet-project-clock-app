@@ -33,7 +33,6 @@
   margin: 0 auto;
   width: 375px;
   height: 667px;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
 }
