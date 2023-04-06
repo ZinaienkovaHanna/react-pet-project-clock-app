@@ -86,14 +86,13 @@
 .up {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
-  margin-top: 12px;
-  margin-left: 2px;
+  margin-top: 13px;
 }
 
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  margin-top: 8px;
+  margin-top: 9px;
 }
 
 .timeOfDay {
@@ -147,11 +146,11 @@
   }
 
   .up {
-    margin-top: 16px;
+    margin-top: 17px;
   }
 
   .down {
-    margin-top: 12px;
+    margin-top: 13px;
   }
 }
 
