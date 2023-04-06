@@ -31,11 +31,11 @@ const Clock = ({
       </div>
 
       <button onClick={toggleButtonClick}>
-        <span>{onButtonClicked ? 'more' : 'less'}</span>
+        <span>{!onButtonClicked ? 'more' : 'less'}</span>
         <div className={styles.circle}>
           <div
             className={`${styles.arrow} ${
-              onButtonClicked ? styles.down : styles.up
+              !onButtonClicked ? styles.down : styles.up
             }`}
           ></div>
         </div>

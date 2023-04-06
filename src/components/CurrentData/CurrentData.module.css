@@ -160,7 +160,7 @@
     position: absolute;
     width: 1px;
     height: 252px;
-    left: 60%;
+    left: 65%;
     background-color: var(--very-dark-grey);
     opacity: 0.25;
     grid-row: 1 / -1;

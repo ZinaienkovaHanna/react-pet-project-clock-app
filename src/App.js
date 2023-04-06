@@ -82,10 +82,10 @@ function App() {
       >
         <div
           className={`${styles.mainClockContainer} ${
-            onButtonClicked ? '' : styles.otherHeight
+            !onButtonClicked ? '' : styles.otherHeight
           }`}
         >
-          {onButtonClicked && <Quote />}
+          {!onButtonClicked && <Quote />}
           <Clock
             currentTime={currentTime}
             city={city}
@@ -96,7 +96,7 @@ function App() {
           />
         </div>
       </div>
-      {!onButtonClicked && (
+      {onButtonClicked && (
         <CurrentData
           timeZone={timeZone}
           dayOfWeek={dayOfWeek}
