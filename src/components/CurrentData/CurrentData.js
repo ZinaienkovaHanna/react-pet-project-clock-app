@@ -20,7 +20,8 @@ const CurrentData = ({
       <div className={styles.container}>
         <div className={styles.gridContainer}>
           <h6>CURRENT TIMEZONE</h6>
-          <h2>{timeZone}</h2>
+          {/* <h2>{timeZone}</h2> */}
+          <h2>America/washington</h2>
 
           <h6>Day of the year</h6>
           <h2>{dayOfYear}</h2>

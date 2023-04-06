@@ -9,8 +9,8 @@
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
+  justify-content: center;
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../public/images/mobile/bg-image-daytime.jpg);
   background-size: cover;

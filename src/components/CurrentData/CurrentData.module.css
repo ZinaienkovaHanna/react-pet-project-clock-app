@@ -1,9 +1,9 @@
 .currentDataContainer {
   flex: 1;
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 .currentDataContainer.dayTime {
@@ -15,8 +15,8 @@
 }
 
 .container {
-  width: 375px;
-  height: 256px;
+  max-width: 375px;
+  min-height: 256px;
   margin: 0 auto;
 }
 
@@ -65,12 +65,12 @@
 
 @media (min-width: 768px) {
   .container {
-    width: 768px;
-    height: 440px;
+    max-width: 768px;
+    min-height: 440px;
   }
 
   .gridContainer {
-    max-width: 602px;
+    max-width: 720px;
     margin: 0;
     padding-top: 119px;
     padding-left: 64px;
@@ -134,17 +134,16 @@
 
 @media (min-width: 1440px) {
   .container {
-    width: 1440px;
-    height: 400px;
+    max-width: 1440px;
+    min-height: 400px;
   }
 
   .gridContainer {
-    max-width: 1009px;
+    max-width: 1200px;
     padding-left: 165px;
     padding-top: 74px;
     grid-row-gap: 9px;
     grid-column-gap: 242px;
-    position: relative;
   }
 
   .gridContainer h6:nth-child(3) {
@@ -153,17 +152,6 @@
 
   .gridContainer h6:nth-last-child(2) {
     padding-top: 33px;
-  }
-
-  .gridContainer::after {
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 252px;
-    left: 65%;
-    background-color: var(--very-dark-grey);
-    opacity: 0.25;
-    grid-row: 1 / -1;
   }
 
   .gridContainer h2 {
