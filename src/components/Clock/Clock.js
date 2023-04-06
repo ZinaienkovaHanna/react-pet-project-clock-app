@@ -14,7 +14,11 @@ const Clock = ({
     <div className={styles.clockContainer}>
       <div>
         <div className={styles.timeOfDay}>
-          <img src="/images/desktop/icon-sun.svg" alt="refresh" />
+          {timeOfDay === 'evening' || timeOfDay === 'night' ? (
+            <img src="/images/desktop/icon-moon.svg" alt="refresh" />
+          ) : (
+            <img src="/images/desktop/icon-sun.svg" alt="refresh" />
+          )}
           <h4>Good {timeOfDay}</h4>
         </div>
         <h1>
@@ -27,15 +31,14 @@ const Clock = ({
       </div>
 
       <button onClick={toggleButtonClick}>
-        {onButtonClicked ? (
-          <>
-            <span>more</span> <div className={styles.arrowDown}></div>
-          </>
-        ) : (
-          <>
-            <span>less</span> <div className={styles.arrowUp}></div>
-          </>
-        )}
+        <span>{onButtonClicked ? 'more' : 'less'}</span>
+        <div className={styles.circle}>
+          <div
+            className={`${styles.arrow} ${
+              onButtonClicked ? styles.down : styles.up
+            }`}
+          ></div>
+        </div>
       </button>
     </div>
   );

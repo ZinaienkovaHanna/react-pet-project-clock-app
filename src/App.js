@@ -77,33 +77,40 @@ function App() {
   }, [currentDate, currentTime]);
 
   return (
-    <div
-      className={`bgContainer ${
-        timeOfDay === 'night' || timeOfDay === 'evening'
-          ? 'nightTime'
-          : 'dayTime'
-      }`}
-    >
-      <section className="mainClockContainer">
-        {onButtonClicked && <Quote />}
-        <Clock
-          currentTime={currentTime}
-          city={city}
-          countryCode={countryCode}
-          timeOfDay={timeOfDay}
-          toggleButtonClick={toggleButtonClick}
-          onButtonClicked={onButtonClicked}
-        />
-        {!onButtonClicked && (
-          <CurrentData
-            timeZone={timeZone}
-            dayOfWeek={dayOfWeek}
-            dayOfYear={dayOfYear}
-            weekOfYear={weekOfYear}
+    <section className="clockApp">
+      <div
+        className={`bgContainer ${
+          timeOfDay === 'night' || timeOfDay === 'evening'
+            ? 'nightTime'
+            : 'dayTime'
+        }`}
+      >
+        <div
+          className={`mainClockContainer ${
+            onButtonClicked ? '' : 'otherHeight'
+          }`}
+        >
+          {onButtonClicked && <Quote />}
+          <Clock
+            currentTime={currentTime}
+            city={city}
+            countryCode={countryCode}
+            timeOfDay={timeOfDay}
+            toggleButtonClick={toggleButtonClick}
+            onButtonClicked={onButtonClicked}
           />
-        )}
-      </section>
-    </div>
+        </div>
+      </div>
+      {!onButtonClicked && (
+        <CurrentData
+          timeZone={timeZone}
+          dayOfWeek={dayOfWeek}
+          dayOfYear={dayOfYear}
+          weekOfYear={weekOfYear}
+          timeOfDay={timeOfDay}
+        />
+      )}
+    </section>
   );
 }
 

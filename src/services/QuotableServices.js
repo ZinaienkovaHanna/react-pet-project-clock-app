@@ -7,7 +7,6 @@ const useQuotableServices = () => {
     try {
       const response = await axios.get(_apiBase);
       const { content, author } = response.data;
-      console.log(response.data);
 
       return { content, author };
     } catch (error) {

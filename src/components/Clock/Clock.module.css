@@ -62,30 +62,38 @@
   padding: 0;
 }
 
-.arrowDown,
-.arrowUp {
+.circle {
   width: 32px;
   height: 32px;
-  margin-left: 4px;
   border-radius: 50%;
   background-color: var(--very-dark-grey);
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-left: 8px;
+  overflow: hidden;
   margin-right: 4px;
 }
 
-.arrowDown {
-  background-image: url('../../../public/images/desktop/icon-arrow-down.svg');
-  background-size: 12px;
+.arrow {
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
 }
 
-.arrowUp {
-  background-image: url('../../../public/images/desktop/icon-arrow-up.svg');
-  background-size: 36px;
+.circle:hover {
+  background-color: var(--light-grey);
 }
 
-.clockContainer button span {
-  margin-right: 5px;
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  margin-top: 12px;
+  margin-left: 2px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin-top: 8px;
 }
 
 .timeOfDay {
@@ -132,10 +140,18 @@
     margin-bottom: 64px;
   }
 
-  .arrowDown,
-  .arrowUp {
+  .circle {
     width: 40px;
     height: 40px;
+    margin-right: 8px;
+  }
+
+  .up {
+    margin-top: 16px;
+  }
+
+  .down {
+    margin-top: 12px;
   }
 }
 
